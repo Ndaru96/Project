@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using OrderService;
 using OrderService.GraphQl;
 using OrderService.GraphQL;
 using OrderService.Models;
@@ -19,6 +20,8 @@ builder.Services
     .AddQueryType<Query>()
     .AddMutationType<Mutation>()
     .AddAuthorization();
+
+builder.Services.Configure<KafkaSettings>(builder.Configuration.GetSection("KafkaSettings"));
 
 builder.Services.AddControllers();
 //DI Dependency Injection

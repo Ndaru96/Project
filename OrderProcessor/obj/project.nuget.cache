@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cZTMatK9MkpzeC4CvqiVlFZUEBC0u72aGkh5/p2ASCtrGLPIv5X3ns0do62iDixuAKtecGwnVjBywImykYog7A==",
+  "dgSpecHash": "cEyVuzMfdyCo5X4iSvC2MFXauZuklr3suftGcK1wQVEGnRmZByB4i1Enxi4Z+gXwxutYETYmUFLVGGiiIo6CiQ==",
   "success": true,
   "projectFilePath": "E:\\GraphQL\\FinalProjectKafka\\OrderProcessor\\OrderProcessor.csproj",
   "expectedPackageFiles": [
@@ -61,6 +61,7 @@
     "C:\\Users\\NDARU AJI PENANGSANG\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "C:\\Users\\NDARU AJI PENANGSANG\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.17.0\\microsoft.identitymodel.tokens.6.17.0.nupkg.sha512",
     "C:\\Users\\NDARU AJI PENANGSANG\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\NDARU AJI PENANGSANG\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512",
     "C:\\Users\\NDARU AJI PENANGSANG\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\NDARU AJI PENANGSANG\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\NDARU AJI PENANGSANG\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",

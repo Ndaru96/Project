@@ -1,9 +1,13 @@
-﻿using Microsoft.Extensions.Options;
+﻿using HotChocolate.AspNetCore.Authorization;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using OrderService;
+using OrderService.GraphQl;
+using OrderService.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,17 +15,18 @@ namespace OrderService.GraphQL
 {
     public class Mutation
     {
-        public async Task<OrderOutput> SubmitOrderAsync(
-           OrderData input,
-           [Service] IOptions<KafkaSettings> settings)
+        //[Authorize]
+        public async Task<StatusOrder> AddOrderAsync(
+            OrderData input, ClaimsPrincipal claimsPrincipal,
+            [Service] ProductQLContext context, [Service] IOptions<KafkaSettings> settings)
         {
             var dts = DateTime.Now.ToString();
             var key = "order-" + dts;
             var val = JsonConvert.SerializeObject(input);
 
-            var result = await KafkaHelper.SendMessage(settings.Value, "simpleorder", key, val);
+            var result = await KafkaHelper.SendMessage(settings.Value, "order", key, val);
 
-            OrderOutput resp = new OrderOutput
+            StatusOrder resp = new StatusOrder
             {
                 TransactionDate = dts,
                 Message = "Order was submitted successfully"

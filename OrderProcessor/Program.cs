@@ -22,7 +22,7 @@ var config = new ConsumerConfig
     AutoOffsetReset = AutoOffsetReset.Earliest
 };
 
-var topic = "simpleorder";
+var topic = "order";
 CancellationTokenSource cts = new CancellationTokenSource();
 Console.CancelKeyPress += (_, e) =>
 {
@@ -36,8 +36,6 @@ using (var consumer = new ConsumerBuilder<string, string>(config).Build())
     consumer.Subscribe(topic);
     try
     {
-        while (true)
-        {
             while (true)
             {
                 var cr = consumer.Consume(cts.Token); // blocking
@@ -51,7 +49,7 @@ using (var consumer = new ConsumerBuilder<string, string>(config).Build())
                     context.SaveChanges();
                 }
             }
-        }
+        
         
     }
     catch (OperationCanceledException)

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace OrderService.GraphQL
 {
-    public class OrderData
-    {
-        public string Product { set; get; }
-        public int Quantity { set; get; }
-        public float Price { set; get; }
-    }
+    public record OrderData
+    (
+        
+        string Code,
+        int UserId
+        );
+        
+    
 }
