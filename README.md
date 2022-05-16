@@ -1,2 +1,3 @@
 # Project
-80% nanti di update, belum bisa mengembalikan message di kafka
+85% massage submit order belum bisa tampil di console
+
